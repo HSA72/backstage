@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: integration-kafka-processor-example
+  description: This processor is made to test Kafka concepts.
+spec:
+  type: grpc
+  lifecycle: production
+  owner: integration
