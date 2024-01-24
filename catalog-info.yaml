@@ -3,7 +3,13 @@ kind: API
 metadata:
   name: integration-kafka-processor-example
   description: This processor is made to test Kafka concepts.
+  tags:
+    - kafka
+    - grpc
+    - example
 spec:
-  type: grpc
+  type: openapi
   lifecycle: production
   owner: integration
+  definition:
+    $text: https://petstore.swagger.io/v2/swagger.json
