@@ -8,8 +8,8 @@ metadata:
     - grpc
     - example
 spec:
-  type: openapi
+  type: grpc
   lifecycle: production
   owner: integration
   definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+    $text: fan.proto

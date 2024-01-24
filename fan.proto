@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package no.integration.example;
+
+option java_multiple_files = true;
+option java_outer_classname = "FanProto";
+option java_package = "no.integration.example";
+
+import "google/protobuf/field_mask.proto";
+import "google/protobuf/timestamp.proto";
+
+message Fan {
+  // Timestamp for when the event was created
+  .google.protobuf.Timestamp eventTime = 1;
+
+  // Name of the fan
+  string name = 2;
+
+  // Age of the fan
+  int32 age = 3;
+
+  // Name of the rockband
+  string rockband = 4;
+}
+
+service ProcessorExampleService {
+  rpc GetFan (GetFanRequest) returns (GetFanResponse) {
+  }
+
+  rpc GetFanFromGlobalState (GetFanRequest) returns (GetFanResponse) {
+  }
+}
+
+message GetFanRequest {
+  string key = 1;
+}
+
+message GetFanResponse {
+  Fan fan = 1;
+}
+
