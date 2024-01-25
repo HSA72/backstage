@@ -17,20 +17,20 @@ spec:
   owner: team-integration
   definition:
     $text: fan.proto
-
 ---
-apiVersion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1beta2
 kind: Component
 metadata:
   name: integration-kafka-processor-example
-  description: This processor is made to test Kafka concepts.
+  description: A Kafka consumer service that processes messages from a Kafka topic
+  tags:
+    - kafka
+    - consumer
 spec:
-  type: kafka-processor
+  type: service
   lifecycle: production
   owner: team-integration
-  system: example-system
-#  dependsOn:
-#    - resource:default/artists-db
+  system: kafka-system
   providesApis:
     - integration-kafka-processor-example
 ---
