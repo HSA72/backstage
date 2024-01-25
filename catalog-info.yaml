@@ -22,14 +22,29 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: artist-web
-  description: The place to be, for great artists
+  name: integration-kafka-processor-example
+  description: This processor is made to test Kafka concepts.
 spec:
   type: kafka-processor
   lifecycle: production
   owner: team-integration
-  system: artist-engagement-portal
+  system: example-system
 #  dependsOn:
 #    - resource:default/artists-db
   providesApis:
     - integration-kafka-processor-example
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Confluent Cloud
+  description: Kafka cluster
+spec:
+  type: kafka-cluster
+  lifecycle: production
+  owner: team-integration
+  system: kafka
+  #  dependsOn:
+  #    - resource:default/artists-db
+#  providesApis:
+#    - integration-kafka-processor-example
