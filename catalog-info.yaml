@@ -7,9 +7,10 @@ metadata:
     - kafka
     - grpc
     - example
-link:
-  url: https://api-strategy.docs.gjensidige.io/principles-and-guidelines/technology-specific-guidelines/guidelines_datastreams
-  title: Gjensidige event streams guidelines
+  links:
+    - url: https://api-strategy.docs.gjensidige.io/principles-and-guidelines/technology-specific-guidelines/guidelines_datastreams
+      title: Gjensidige event streams guidelines
+      icon: dashboard
 spec:
   type: grpc
   lifecycle: production
