@@ -33,18 +33,16 @@ spec:
   system: kafka-system
   providesApis:
     - integration-kafka-processor-example
+  dependsOn:
+    - resource:default/ConfluentCloud
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Resource
 metadata:
-  name: Confluent Cloud
+  name: ConfluentCloud
   description: Kafka cluster
 spec:
   type: kafka-cluster
   lifecycle: production
   owner: team-integration
   system: kafka
-  #  dependsOn:
-  #    - resource:default/artists-db
-#  providesApis:
-#    - integration-kafka-processor-example
