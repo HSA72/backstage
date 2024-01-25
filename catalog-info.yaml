@@ -14,6 +14,22 @@ metadata:
 spec:
   type: grpc
   lifecycle: production
-  owner: integration
+  owner: team-integration
   definition:
     $text: fan.proto
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: artist-web
+  description: The place to be, for great artists
+spec:
+  type: kafka-processor
+  lifecycle: production
+  owner: team-integration
+  system: artist-engagement-portal
+#  dependsOn:
+#    - resource:default/artists-db
+  providesApis:
+    - integration-kafka-processor-example
