@@ -2,15 +2,15 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: integration-kafka-processor-example
+  links:
+    - url: https://api-strategy.docs.gjensidige.io/principles-and-guidelines/technology-specific-guidelines/guidelines_datastreams
+      title: Gjensidige event streams guidelines
+      icon: dashboard
   description: This processor is made to test Kafka concepts.
   tags:
     - kafka
     - grpc
     - example
-  links:
-    - url: https://api-strategy.docs.gjensidige.io/principles-and-guidelines/technology-specific-guidelines/guidelines_datastreams
-      title: Gjensidige event streams guidelines
-      icon: dashboard
 spec:
   type: grpc
   lifecycle: production
