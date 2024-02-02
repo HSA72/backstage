@@ -27,7 +27,7 @@ metadata:
     - kafka
     - consumer
   annotations:
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: url:https://github.com/HSA72/backstage/blob/main/README.md
 spec:
   type: service
   lifecycle: production
